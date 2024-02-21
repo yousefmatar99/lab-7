@@ -12,7 +12,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
-
 public class App
 {
     private static Session session;
@@ -204,5 +203,6 @@ public class App
             session.close();
         }
     }
+
 }
 
