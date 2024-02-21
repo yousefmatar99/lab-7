@@ -1,7 +1,6 @@
 package org.example;
 import javax.persistence.*;
 import java.io.Serializable;
-import java.time.LocalDateTime;
 
 @Entity
 @IdClass(MyEntityPK.class)
@@ -12,10 +11,10 @@ public class PD {
     @Id
     private int docID;
     private String description;
-    private LocalDateTime dateOp;
+    private String dateOp;
 
     public PD() { }
-    public PD (int patientID, int docID, LocalDateTime dateOp, String description) {
+    public PD (int patientID, int docID, String dateOp, String description) {
         super();
         this.patientID = patientID;
         this.docID = docID;
@@ -24,8 +23,8 @@ public class PD {
     }
     public String getDescription () {return description;}
     public void setDescription (String str) {description = str;}
-    public LocalDateTime getDateOp () {return dateOp;}
-    public void setDateOp (LocalDateTime date) {dateOp = date;}
+    public String getDateOp () {return dateOp;}
+    public void setDateOp (String date) {dateOp = date;}
     public int getPatientID() {return patientID;}
     public int getDocID () {return docID;}
 }

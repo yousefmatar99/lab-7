@@ -1,6 +1,5 @@
 package org.example;
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "Doctors")
@@ -33,5 +32,9 @@ public class Doctors {
     public void setPassword (String str) {password = str;}
     public int getId() {
         return id;
+    }
+    @Override
+    public String toString() {
+        return "Id: " + id+ ", First Name: "+first+", Last name "+ last+", Email: "+email+", Password: "+password;
     }
 }
